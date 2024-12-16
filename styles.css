@@ -1,49 +1,131 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+/* Header Section */
 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+header nav ul {
+    display: flex;
+    list-style: none;
 }
 
-nav ul li a {
-    color: white;
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
     text-decoration: none;
+    color: black;
 }
 
-#hero {
-    text-align: center;
-    padding: 50px;
+/* Hero Section */
+.hero {
     background-color: #6a11cb;
     color: white;
-}
-
-#about {
     text-align: center;
-    padding: 30px;
+    padding: 50px;
 }
 
+.hero .social-icons img {
+    width: 30px;
+    margin: 10px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.about-stats h3 {
+    font-size: 30px;
+}
+
+button {
+    background-color: #6a11cb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Shop Section */
+.shop {
+    text-align: center;
+    padding: 20px;
+}
+
+.help-options ul {
+    list-style: none;
+}
+
+.help-options li {
+    margin: 5px;
+}
+
+/* Causes Section */
+.causes {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.cause {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 45%;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.contact input, .contact textarea, .contact button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px;
     background-color: #333;
     color: white;
+    padding: 10px;
+}
+
+footer a {
+    color: #6a11cb;
+    text-decoration: none;
+}
+.logo img {
+    width: 120px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
 }
