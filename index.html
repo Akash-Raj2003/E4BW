@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta Information -->
     <meta charset="UTF-8">
@@ -7,6 +8,8 @@
     <title>E4BW | Editors For A Better World</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+
 </head>
 <body>
 
@@ -58,8 +61,8 @@
         <!-- "Meet Our Team" Section -->
         <div class="team-graphic">
             <img class="team-image" src="Homepage/Meet_our_team.png" alt="Meet Our Team">
-            <div class="redirect-arrow">
-                <img class="redirection_arrow" src="Homepage/redirect_arrow.png" alt="arrow">
+            <div class="redirect-arrow1">
+                <img class="redirection_arrow1" src="Homepage/redirect_arrow.png" alt="arrow">
             </div>
         </div>
     </div>
@@ -91,28 +94,52 @@
         </div>
         <div class="project-divider"></div>
     </section>
-    <!-- How You Can Help & Explore Shop Section -->
-    <section class="help-shop">
-        <div class="help-container">
-            <!-- Left: How You Can Help -->
-            <div class="help-text">
-                <h2>HOW YOU CAN HELP</h2>
-                <ul>
-                    <li>> donations</li>
-                    <li>> commissions</li>
-                    <li>> join the team</li>
-                </ul>
-                <a href="#" class="donate-button">DONATE YOUR RESOURCES ⟶</a>
-                <p class="donation-info">⭐ 100% of all profits made from our donated products will go straight towards meeting our current donation goals</p>
+
+  <!-- How You Can Help & Explore Shop Section -->
+<section class="help-shop">
+    <div class="help-container">
+        <div class="help-text">
+            <h2>HOW YOU CAN HELP</h2>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Donations ▼</button>
+                <div class="dropdown-content">
+                    <p>Your donations help us provide better resources and opportunities for those in need.</p>
+                </div>
             </div>
 
-            <!-- Right: Explore Shop -->
-            <div class="shop-section">
-                <h2>Explore Shop ⟶</h2>
-                <div class="shop-box"></div> <!-- Placeholder for image -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Commissions ▼</button>
+                <div class="dropdown-content">
+                    <p>We offer custom commissions tailored to your needs. Contact us for more information!</p>
+                </div>
             </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Join the Team ▼</button>
+                <div class="dropdown-content">
+                    <p>Become a part of our mission by joining our amazing team. Apply today!</p>
+                </div>
+            </div>
+
+            <a href="#" class="donate-button">DONATE YOUR RESOURCES ⟶</a>
+            <p class="donation-info">⭐ 100% of all profits made from our donated products will go straight towards meeting our current donation goals</p>
         </div>
-    </section>
+    </div>
+
+    <!-- Right: Explore Shop -->
+    <div class="shop-section">
+        <div class="shop-header">
+            <h2 class="shop-title">Explore Shop</h2>
+            <img src="Homepage/redirect_arrow.png" alt="Redirect Arrow" class="redirect-arrow">
+        </div>
+        <div class="shop-box">
+            <img src="Homepage/explore_shop.png" alt="Explore Shop" class="explore-shop-img">
+        </div>
+    </div>
+    
+</section>
+
 
     <!-- Footer -->
     <footer>
