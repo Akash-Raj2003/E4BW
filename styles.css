@@ -5,12 +5,18 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100vw; /* Ensures the viewport width does not exceed screen size */
+}
 
 /* Body */
 body {
-    position: relative; /* Allows absolute elements to be positioned inside */
+    position: relative;
     background-color: #fff;
+    padding-top: 60px; /* Adjust based on header height */
 }
+
 
                       /* HEADER SECTION */
 header {
@@ -20,18 +26,26 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
+    position: fixed; /* Makes navigation stay on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
 }
 
+                    /* NAVIGATION ICONS AT THE TOP OF THE PAGE */
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: right;
     width: 100%;
+    max-width: 1200px;
+    justify-content: space-between; /* Ensures proper alignment */
 }
 
 .logo {
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 
 .logo img {
@@ -40,23 +54,39 @@ nav {
 }
 
 .logo span {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    margin-left: 20px; /* Pushes nav items to the right */
+    gap: 30px; /* Keeps spacing consistent */
+    flex-wrap: nowrap;
 }
+
+nav ul li {
+    text-align: left; /* Aligns text to the right */
+}
+
 
 nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+    padding: 10px 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ensures links stay in shape */
+    white-space: nowrap; /* Prevents text from wrapping */
 }
-
+nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
                               /* MAIN PAGE SECTION*/
 .hero {
     position: relative;
@@ -134,16 +164,16 @@ nav ul li a {
 }
 
 /* Redirect Arrow */
-.redirect-arrow {
+.redirect-arrow1 {
     position: absolute;
-    right: 6%;
+    right: 8%;
     bottom: 10%;
 }
-.redirect-arrow img {
+.redirect-arrow1 img {
     width: 5vw;
     height: auto;
 }
-.redirect-arrow img:hover {
+.redirect-arrow1 img:hover {
     transform: scale(1.2);
     opacity: 0.8;
 }
@@ -164,10 +194,27 @@ nav ul li a {
 }
 
 .stat-box {
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 60px; /* Creates ellipse effect */
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 5vh; /* Moves it down */
+    margin-left: 0vw; /* Moves it right */
 }
+.stat-box:hover {
+    background-color: grey;
+    color: white;
+    
+}
+
+.stat-box:hover * {
+    color: white; /* Ensures all text inside the stat-box turns white */
+}
+
+
 
 .stat-box h3 {
     font-size: 64px;
@@ -202,7 +249,7 @@ nav ul li a {
     background-color: #1E3A8A;
     margin: 10px 0;
     position: relative;
-    flex: 0 0 auto;
+   
 }
 
 /* Marquee container (Only the text moves, not the lines) */
@@ -238,20 +285,19 @@ nav ul li a {
                                /*HELP AND SHOP SECTION */
 .help-shop {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 50px 20px;
+    justify-content: space-between; /* Pushes items to the opposite ends */
+    align-items: flex-start;
+    width: 100vw; /* Make it take full screen width */
+    padding: 50px; /* Adds spacing */
 }
 
+
 .help-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    gap: 50px;
+    flex: 1;
+    max-width: 50%; /* Ensures it doesn’t shrink too much */
+    text-align: left;
 }
+
 
 /* Left Side - How You Can Help */
 .help-text {
@@ -260,20 +306,20 @@ nav ul li a {
 }
 
 .help-text h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .help-text ul {
     list-style: none;
     padding: 0;
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .help-text ul li {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #d3d3d3;
-    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #d3d3d3;
+    padding-bottom: 20px;
 }
 
 .donate-button {
@@ -285,6 +331,7 @@ nav ul li a {
     margin-top: 10px;
     border-radius: 20px;
     font-weight: bold;
+    border: 2px solid black;
 }
 
 .donation-info {
@@ -292,11 +339,16 @@ nav ul li a {
     margin-top: 10px;
     color: #555;
 }
-
+.donate-button:hover {
+    background-color: white;
+    color: black;
+}
 /* Right Side - Explore Shop */
 .shop-section {
     flex: 1;
-    text-align: center;
+    max-width: 50%;
+    text-align: left;
+    margin-right: -90px; /* Moves it 20px to the left */
 }
 
 .shop-section h2 {
@@ -305,8 +357,88 @@ nav ul li a {
 }
 
 .shop-box {
-    width: 100%;
-    height: 200px;
-    background-color: #6B8CF7;
+    margin-left: 0; /* Remove extra margin */
+    text-align: center;
+}
+
+.shop-title {
+    position: relative;
+    top: 40px; /* Moves text 10px down */
+    margin-left: -60px; /* Moves text 20px to the right */
+}
+
+.shop-box img {
+    width: 40vw;
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
+}
+.shop-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and arrow */
+    white-space: nowrap;
+}
+.shop-header h2 {
+    font-size: clamp(24px, 3vw, 50px); /* Responsive font size */
+    font-weight: bold;
+    text-align: center;
+}
+
+.redirect-arrow {
+    width: 30px; /* Adjust arrow size */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect to make arrow interactive */
+.shop-header:hover .redirect-arrow {
+    transform: scale(1.2); /* Slightly enlarges arrow on hover */
+    opacity: 0.8;
+}
+
+
+
+/* Dropdown Container */
+.dropdown {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    position: relative;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid black; /* Adds an underline effect */
+}
+
+/* Dropdown Arrow */
+.dropdown-btn::after {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Content (Hidden Initially) */
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid black;
+    background-color: #f9f9f9;
+}
+
+/* Show Content When Clicked */
+.dropdown.active .dropdown-btn::after {
+    transform: rotate(180deg);
 }
