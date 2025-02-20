@@ -104,21 +104,31 @@
             <div class="dropdown">
                 <button class="dropdown-btn">Donations ▼</button>
                 <div class="dropdown-content">
-                    <p>Your donations help us provide better resources and opportunities for those in need.</p>
+                    <p>Donate your resources to add to our Payhip! 
+                        You can donate using this
+                        <a href="https://www.youtube.com" target="_blank" class="help-link">link</a>.
+                    </p>
                 </div>
             </div>
 
             <div class="dropdown">
                 <button class="dropdown-btn">Commissions ▼</button>
                 <div class="dropdown-content">
-                    <p>We offer custom commissions tailored to your needs. Contact us for more information!</p>
+                    <p>In the future, we intend to establish a commission system that 
+                       will facilitate connections between individuals seeking editing
+                       services and qualified editors, allowing them to collaborate on 
+                        a commission basis.
+                    </p>
                 </div>
             </div>
 
             <div class="dropdown">
                 <button class="dropdown-btn">Join the Team ▼</button>
                 <div class="dropdown-content">
-                    <p>Become a part of our mission by joining our amazing team. Apply today!</p>
+                    <p>Join our admin team to directly help out in our organization's 
+                        mission. More Information
+                        <a href="https://www.youtube.com" target="_blank" class="help-link">here</a>.
+                    </p>
                 </div>
             </div>
 
@@ -140,11 +150,54 @@
     
 </section>
 
+<!-- Back to Top Button -->
+<div class="back-to-top" onclick="scrollToTop()">
+    <img src="Homepage/back-to-top.png" alt="Back to Top" class="back-to-top-img">
+    <p>Back To Top ↑</p>
+    <p>       .       </p>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Editors For A Better World. All rights reserved.</p>
-    </footer>
+
+<!-- Contact Us Section -->
+<section class="contact-section">
+    <div class="contact-container">
+        <!-- Left Side: Contact Title & Description -->
+        <div class="contact-info">
+            <h2 class="contact-title">CONTACT US</h2>
+            <p>Leave us a message! Alternatively, you can directly contact a member of the team 
+                <a href="https://www.youtube.com" target="_blank">here</a> ↗
+            <p>
+            <br>
+            <p>Email: editorsforabetterworld@gmail.com<p>
+            <p>Instagram: @editorsforabetterworld</p>
+                
+            </p>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form-container">
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="query">Query</label>
+                <textarea id="query" name="query" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 Editors For A Better World. All rights reserved.</p>
+</footer>
+
 
 </body>
 </html>
