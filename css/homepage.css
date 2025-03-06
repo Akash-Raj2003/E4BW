@@ -8,6 +8,7 @@
 html, body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
     width: 100vw; /* Ensures the viewport width does not exceed screen size */
+    scroll-behavior: smooth;
 }
 
 /* Body */
@@ -88,6 +89,10 @@ nav ul li a {
     white-space: nowrap; 
 }
 nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+nav ul li a.active {
     background-color: black;
     color: white;
 }
@@ -561,7 +566,7 @@ nav ul li a:hover {
     color: white;
     display: inline-block;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 

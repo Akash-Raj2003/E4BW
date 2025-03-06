@@ -85,6 +85,11 @@ nav ul li a:hover {
     background-color: black;
     color: white;
 }
+nav ul li a.active {
+    background-color: black;
+    color: white;
+}
+
 
 /* Dropdown Styles */
 .dropdown {
@@ -135,14 +140,14 @@ nav ul li a:hover {
 /* Meet the Team Section */
 .meet-team h1 {
     font-size: 36px;
-    margin: 80px 0 20px; /* Adjusted for fixed header spacing */
+    margin: 100px 0 20px; /* Adjusted for fixed header spacing */
 }
 
 .team-navigation {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .team-navigation a {
@@ -166,7 +171,7 @@ nav ul li a:hover {
 }
 
 .team-category {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     margin: 30px 0;
 }
@@ -201,20 +206,35 @@ nav ul li a:hover {
 .profile-placeholder {
     width: 120px;
     height: 120px;
-    background-color: lightgray;
+    background-color:grey;
     border-radius: 50%;
     margin: 10px auto;
 }
 
-.name {
+.name-green{
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
-    background-color: #d3d3d3;
+    background-color: #559F34;
     padding: 8px;
     border-radius: 20px;
 }
-
+.name-blue{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #728FE4;
+    padding: 8px;
+    border-radius: 20px;
+}
+.name-dark-blue{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #34529E;
+    padding: 8px;
+    border-radius: 20px;
+}
 .icons {
     display: flex;
     justify-content: center;
@@ -226,12 +246,50 @@ nav ul li a:hover {
     width: 24px;
     height: 24px;
 }
+.icons img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
 
 .fun-fact {
     font-size: 12px;
     color: gray;
     margin-top: 10px;
 }
+                         /* New Marketing Section */
+.marketing-section {
+    margin-top: 50px;  /* Adds space between sections */
+}
+.marketing-section h2 {
+    font-size: 28px;  /* Matches team title size */
+    font-weight: bold;
+    margin: 30px 0;   /* Adds spacing around the section title */
+}
+.marketing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.marketing-member {
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.marketing-member .title {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    transform: rotate(-20deg);  /* Adds the slanted effect */
+    display: inline-block;
+}
+
 
 /* Footer */
 footer {
@@ -241,4 +299,144 @@ footer {
     padding: 10px;
     font-size: 12px;
     margin-top: 50px;
+}
+
+/* Outreach Section */
+.outreach-section {
+    margin-top: 50px;
+}
+
+.outreach-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.outreach-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.outreach-member {
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.outreach-member .title {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    transform: rotate(-20deg);
+    display: inline-block;
+}
+
+/* Back to Top Section */
+.back-to-top {
+    position: relative; /* Keeps it in the normal document flow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; /* Adds space between sections */
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Back to Top Image */
+.back-to-top-img {
+    width: 80px; /* Adjust image size */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.back-to-top:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    opacity: 0.8;
+}
+
+
+/* Contact Us Section */
+.contact-section {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container for Text & Form */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Spaces elements apart */
+    align-items: flex-start; /* Aligns items at the top */
+    max-width: 1000px;
+    width: 90%;
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+    flex: 1; /* Takes up left side */
+    text-align: left;
+    max-width: 40%;
+    font-size: 20px;
+}
+
+/* Contact Title */
+.contact-title {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Right Side: Contact Form */
+.contact-form-container {
+    flex: 1; /* Takes up right side */
+    max-width: 50%;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100px;
+    align-self: flex-end; /* Aligns button to the right */
 }

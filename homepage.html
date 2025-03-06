@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Meta Information -->
     <meta charset="UTF-8">
@@ -27,10 +26,10 @@
                     <ul class="dropdown-menu">
                         <li><a href="our-story.html">Our Story</a></li>
                         <li><a href="meet-the-team.html">Meet the Team</a></li> <!-- Redirects to another webpage -->
-                        <li><a href="join-the-team.html">Join the Team</a></li>
+                        <li><a href="join-us.html">Join the Team</a></li>
                     </ul>
                 </li>
-                <li><a href="#shop">Shop</a></li>
+                <li><a href="https://payhip.com/editorsforabetterworld">Shop</a></li>
                 <li><a href="#donate">Donate</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -47,13 +46,13 @@
         <!-- Clickable Social Media Icons (Positioned Absolutely) -->
         <div class="social-icons">
             <a href="https://www.instagram.com/editorsforabetterworld/" target="_blank">
-                <img class="icon-instagram" src="Homepage/image 1.png" alt="Instagram">
+                <img class="icon-instagram" src="Homepage/instagram.png" alt="Instagram">
             </a>
             <a href="https://www.tiktok.com/@editorsforabetterworld" target="_blank">
-                <img class="icon-tiktok" src="Homepage/image 2.png" alt="TikTok">
+                <img class="icon-tiktok" src="Homepage/tiktok.png" alt="TikTok">
             </a>
             <a href="https://www.youtube.com/@editorsforabetterworld" target="_blank">
-                <img class="icon-youtube" src="Homepage/image 3.png" alt="YouTube">
+                <img class="icon-youtube" src="Homepage/youtube.png" alt="YouTube">
             </a>
         </div>
     </section>
@@ -162,21 +161,28 @@
 <div class="back-to-top" onclick="scrollToTop()">
     <img src="Homepage/back-to-top.png" alt="Back to Top" class="back-to-top-img">
     <p>Back To Top ↑</p>
-    <p>       .       </p>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
 
 <!-- Contact Us Section -->
-<section class="contact-section">
+<section id="contact" class="contact-section">
     <div class="contact-container">
         <!-- Left Side: Contact Title & Description -->
         <div class="contact-info">
             <h2 class="contact-title">CONTACT US</h2>
+            <br>
+            <br>
             <p>Leave us a message! Alternatively, you can directly contact a member of the team 
                 <a href="https://www.youtube.com" target="_blank">here</a> ↗
             <p>
             <br>
-            <p>Email: editorsforabetterworld@gmail.com<p>
+            <br>
+            <p>Email:<p>
+            </p> editorsforabetterworld@gmail.com<p>
             <p>Instagram: @editorsforabetterworld</p>
                 
             </p>
@@ -184,17 +190,21 @@
 
         <!-- Right Side: Contact Form -->
         <div class="contact-form-container">
-            <form class="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+            <form 
+            class="contact-form"
+            action="https://formspree.io/f/mpwpapbj" 
+            method="POST"
+            >
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-                <label for="query">Query</label>
-                <textarea id="query" name="query" rows="4" required></textarea>
+            <label for="query">Query</label>
+            <textarea id="query" name="query" rows="4" required></textarea>
 
-                <button type="submit">Send</button>
+            <button type="submit">Send</button>
             </form>
         </div>
     </div>
