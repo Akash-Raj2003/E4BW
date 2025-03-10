@@ -1,0 +1,621 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100vw; /* Ensures the viewport width does not exceed screen size */
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    position: relative;
+    background-color: #fff;
+    padding-top: 60px; /* Adjust based on header height */
+}
+
+
+                      /* HEADER SECTION */
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: fixed; /* Makes navigation stay on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+                    /* NAVIGATION ICONS AT THE TOP OF THE PAGE */
+nav {
+    display: flex;
+    align-items: right;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between; /* Ensures proper alignment */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Ensure all items are aligned properly */
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative; /* Needed for dropdown positioning */
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px 20px; /* Ensure equal padding for all items */
+    border: 2px solid black;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap; 
+}
+nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+nav ul li a.active {
+    background-color: black;
+    color: white;
+}
+/* Style the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Rounded corners */
+    width: 190px; /* Ensure width fits */
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Style dropdown menu items */
+.dropdown-menu li {
+    list-style: none;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 50px; /* Ensures button-like shape */
+    margin: 5px;
+    transition: background 0.3s ease;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.dropdown-menu li a:hover {
+    background-color: black;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+                              /* MAIN PAGE SECTION*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Social Media Icons */
+.social-icons {
+    position: absolute;
+    display: flex;
+    gap: 15px; /* Space between icons */
+    left: 4vw; /* Adjust to align properly */
+    bottom: 20px; /* Anchors the icons to the bottom instead of using 'top' */
+}
+
+.social-icons img {
+    width: 4vw; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 60px; /* Prevents icons from getting too large */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Effect */
+.social-icons img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+
+                        /* ABOUT SECTION  */
+.about-section {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    min-height: 20vh; 
+    left: 0vw;
+    top: 5vh;
+}
+
+/* About Section Container */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+/* "Who Are We?" Image */
+.about-text {
+    position: relative;
+    width: 45vw;
+    max-width: 600px;
+}
+
+/* Image Resizing */
+.about-image {
+    width: 100%;
+    height: auto;
+}
+
+                             /* MMEET OUR TEAM*/
+.team-graphic {
+    width: 30vw;
+}
+
+.team-graphic img {
+    width: 100%;
+    height: auto;
+}
+
+/* Redirect Arrow */
+.redirect-arrow1 {
+    position: absolute;
+    right: 8%;
+    bottom: 10%;
+}
+.redirect-arrow1 img {
+    width: 5vw;
+    height: auto;
+}
+.redirect-arrow1 img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+
+
+                          /* STATISTICS SECTION */
+.stats-section {
+    background-color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.stat-box {
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 60px; /* Creates ellipse effect */
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 5vh; /* Moves it down */
+    margin-left: 0vw; /* Moves it right */
+}
+.stat-box:hover {
+    background-color: grey;
+    color: white;
+    
+}
+
+.stat-box:hover * {
+    color: white; /* Ensures all text inside the stat-box turns white */
+}
+
+
+
+.stat-box h3 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+                            /* PROJECT FILES SECTION */
+.project-files {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #1E3A8A;
+    text-transform: uppercase;
+    overflow: hidden; /* Ensures the text stays within the section */
+    position: relative;
+    width: 100%;
+}
+
+/* Keeps the divider lines stationary */
+.project-divider {
+    width: 100%;
+    height: 3px;
+    background-color: #1E3A8A;
+    margin: 10px 0;
+    position: relative;
+   
+}
+
+/* Marquee container (Only the text moves, not the lines) */
+.marquee {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: max-content;
+    animation: marquee 10s linear infinite;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+}
+
+/* Style for the scrolling content */
+.marquee-content {
+    display: flex;
+    flex-direction: column; /* Stack the lines */
+    gap: 10px; /* Adjust spacing between lines */
+    align-items: center;
+}
+
+/* Animation for continuous right-to-left movement */
+@keyframes marquee {
+    from {
+        transform: translateX(100vw); /* Start fully off-screen */
+    }
+    to {
+        transform: translateX(-100%); /* Move fully past the left edge */
+    }
+}
+
+
+
+                               /*HELP AND SHOP SECTION */
+.help-shop {
+    display: flex;
+    justify-content: space-between; /* Pushes items to the opposite ends */
+    align-items: flex-start;
+    width: 100vw; /* Make it take full screen width */
+    padding: 50px; /* Adds spacing */
+}
+
+
+.help-container {
+    flex: 1;
+    max-width: 50%; /* Ensures it doesn’t shrink too much */
+    text-align: left;
+}
+
+
+/* Left Side - How You Can Help */
+.help-text {
+    flex: 1;
+    text-align: left;
+}
+
+.help-text h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.help-text ul {
+    list-style: none;
+    padding: 0;
+    font-size: 28px;
+}
+
+.help-text ul li {
+    margin-bottom: 20px;
+    border-bottom: 3px solid #d3d3d3;
+    padding-bottom: 20px;
+}
+
+.donate-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.donation-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
+.donate-button:hover {
+    background-color: white;
+    color: black;
+}
+/* Right Side - Explore Shop */
+.shop-section {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    margin-right: -90px; /* Moves it 20px to the left */
+}
+
+.shop-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.shop-box {
+    margin-left: 0; /* Remove extra margin */
+    text-align: center;
+}
+
+.shop-title {
+    font-size: clamp(24px, 3vw, 50px); /* Responsive text size */
+    font-weight: bold;
+    display: inline-block; /* Prevents text from stretching */
+    margin: 0; /* Avoids unnecessary spacing */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.shop-box img {
+    width: 40vw;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.shop-header {
+    position: relative; /* Enables manual positioning */
+    display: inline-flex; /* Keeps text and arrow in the same line */
+    align-items: center; /* Ensures vertical alignment */
+    gap: 8px; /* Adds space between text and arrow */
+}
+.shop-header h2 {
+    font-size: clamp(24px, 3vw, 50px); /* Responsive font size */
+    font-weight: bold;
+    text-align: center;
+}
+
+.redirect-arrow {
+    width: 24px; /* Adjust arrow size */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to make arrow interactive */
+.shop-header:hover .redirect-arrow {
+    transform: scale(1.2); /* Slightly enlarges arrow on hover */
+    opacity: 0.8;
+}
+
+
+
+/* Dropdown Container */
+.dropdown {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    position: relative;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid black; /* Adds an underline effect */
+}
+
+/* Dropdown Arrow */
+.dropdown-btn::after {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Content (Hidden Initially) */
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid black;
+    background-color: #f9f9f9;
+}
+
+/* Show Content When Clicked */
+.dropdown.active .dropdown-btn::after {
+    transform: rotate(180deg);
+}
+
+
+/* Back to Top Section */
+.back-to-top {
+    position: relative; /* Keeps it in the normal document flow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; /* Adds space between sections */
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Back to Top Image */
+.back-to-top-img {
+    width: 80px; /* Adjust image size */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.back-to-top:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    opacity: 0.8;
+}
+
+
+/* Contact Us Section */
+.contact-section {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container for Text & Form */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Spaces elements apart */
+    align-items: flex-start; /* Aligns items at the top */
+    max-width: 1000px;
+    width: 90%;
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+    flex: 1; /* Takes up left side */
+    text-align: left;
+    max-width: 40%;
+    font-size: 20px;
+}
+
+/* Contact Title */
+.contact-title {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Right Side: Contact Form */
+.contact-form-container {
+    flex: 1; /* Takes up right side */
+    max-width: 50%;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100px;
+    align-self: flex-end; /* Aligns button to the right */
+}
+
+/* Footer Styling */
+footer {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    text-align: center; /* Centers the text */
+    padding: 20px 0; /* Adds spacing above and below */
+    font-size: 10px;
+    font-weight: bold;
+    width: 100%; /* Ensures it spans the entire width */
+    position: relative; /* Keeps it below other content */
+}
+

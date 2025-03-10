@@ -1,0 +1,431 @@
+/* General Reset / Basic Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header (same styling you had) */
+header {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  position: fixed; /* Stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: right;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+.logo span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 12px 20px;
+  border: 2px solid black;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: black;
+  color: white;
+}
+
+/* Dropdown Menu (unchanged) */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 190px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+.dropdown-menu li {
+  list-style: none;
+  text-align: center;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin: 5px;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+.dropdown-menu li a:hover {
+  background-color: black;
+  color: white;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Main Our Story Section */
+.our-story-section {
+  padding-top: 100px; /* So content sits below fixed header */
+  padding-bottom: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left; /* Title & paragraphs aligned left */
+}
+
+/* Title */
+.story-heading {
+  font-size: 48px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Content Wrapper: Left & Right columns */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  gap: 30px;
+  margin: 0 20px;  /* side padding */
+}
+
+/* LEFT BOX (Blue background with text) */
+.left-box {
+  flex: 1 1 400px;
+  background-color: #728FE4; /* Or any color you want */
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 500px; /* If you want a scrollable box */
+  overflow-y: auto;  /* scroll if content is long */
+}
+.left-box p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* RIGHT BOX (Quote + Buttons) */
+.right-box {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 280px;
+  align-items: center; /* Ensures everything is centered horizontally */
+}
+
+/* Quote Box (lighter rectangle) */
+.quote-box {
+  background-color: #DCE6F7; /* Lighter shade */
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+}
+.quote-box p {
+  margin-bottom: 8px;
+}
+.founder {
+  text-align: right;
+  font-weight: bold;
+}
+
+.right-text {
+  font-size: 30px;
+  font-weight: bold;
+
+}
+/* Button Group with Beige Border */
+.button-group {
+  
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff; /* White inside */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+  
+}
+/* Within your .button-group styling, just add a rule for the arrow */
+.meet-team-graphic {
+  display: block;   /* or inline-block */
+  margin: 0 auto;   /* centers horizontally */
+  width: 300px;      /* adjust as needed */
+  height: auto;
+  /* Add extra spacing if you want more room above/below */
+  margin-top: 10px; 
+  margin-bottom: 10px;
+}
+.meet-team-graphic:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Common Button Styling */
+.btn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  color: black;
+  background-color: #EDE8D6 ;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Apply to Join Us in Black by Default */
+.apply-black {
+  background-color: black;
+  color: white;
+}
+
+/* Bottom row: Shop & Donate side by side */
+.bottom-row {
+  display: flex;
+  gap: 10px;
+}
+.bottom-row .btn {
+  flex: 1; /* each button grows equally */
+}
+
+/*************************************************
+  SCROLLING BANNER: "EDITORS FOR A BETTER WORLD"
+**************************************************/
+.banner-scroll-container {
+  /* Full width, black lines at top & bottom */
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+  /* Hide overflowing text so it slides in/out cleanly */
+  overflow: hidden;
+  position: relative;
+
+  /* Spacing around the text */
+  padding-top: 20px;
+  padding-bottom: 60px;
+  margin: 35px 0;
+}
+
+/* The moving text inside the container */
+.banner-scroll-content {
+  position: absolute;
+  white-space: nowrap; /* So the text doesn’t break lines */
+  animation: bannerMarquee 8s linear infinite; 
+  /* 8s is how long it takes to go fully across;
+     adjust to make it faster/slower */
+}
+
+/* The actual text parts */
+.efabw-ef {
+  font-weight: bold;
+  font-size: 40px;
+  color: black;
+  margin-right: 8px; /* spacing before the green pill text */
+}
+
+.efabw-abw {
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  background-color: #4CAF50; /* green color */
+  padding: 5px 10px;
+  border-radius: 20px; /* pill shape */
+}
+
+/* KEYFRAMES: Right-to-left marquee */
+@keyframes bannerMarquee {
+  0%   { transform: translateX(100%);  }
+  100% { transform: translateX(-100%); }
+}
+
+.core-values-section {
+  width: 100%;           /* Spans full width of the page */
+  text-align: center;    /* Centers the image horizontally */
+  margin: 40px 0;        /* Spacing above/below the image */
+}
+
+.core-values-img {
+  max-width: 800px;      /* Optional limit so it doesn't get too large */
+  width: 100%;           /* Responsive: fill container up to 800px max */
+  height: auto;          /* Maintain aspect ratio */
+  display: inline-block; /* Ensures centered image if parent text-align: center */
+}
+
+.our-promises-section {
+  width: 100%;           /* Spans full width of the page */
+  text-align: center;    /* Centers the image horizontally */
+  margin: 40px 0;        /* Spacing above/below the image */
+}
+
+.promises-img {
+  max-width: 1200px;      /* Optional limit so it doesn't get too large */
+  width: 100%;           /* Responsive: fill container up to 800px max */
+  height: auto;          /* Maintain aspect ratio */
+  display: inline-block; /* Ensures centered image if parent text-align: center */
+}
+/* Back to Top Section */
+.back-to-top {
+  position: relative; /* Keeps it in the normal document flow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px; /* Adds space between sections */
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Back to Top Image */
+.back-to-top-img {
+  width: 80px; /* Adjust image size */
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.back-to-top:hover {
+  transform: scale(1.1); /* Slightly enlarges on hover */
+  opacity: 0.8;
+}
+/* Container for Text & Form */
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* Spaces elements apart */
+  align-items: flex-start; /* Aligns items at the top */
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto; /* This ensures the container is centered */
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+  flex: 1; /* Takes up left side */
+  text-align: left;
+  max-width: 40%;
+  font-size: 20px;
+}
+
+/* Contact Title */
+.contact-title {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Right Side: Contact Form */
+.contact-form-container {
+  flex: 1; /* Takes up right side */
+  max-width: 50%;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
+  align-self: flex-end; /* Aligns button to the right */
+}
+/* Footer */
+footer {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  text-align: center; /* Centers the text */
+  padding: 20px 0; /* Adds spacing above and below */
+  font-size: 10px;
+  font-weight: bold;
+  width: 100%; /* Ensures it spans the entire width */
+  position: relative; /* Keeps it below other content */
+}
+
