@@ -1,0 +1,344 @@
+/* General Styling */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background-color: white;
+    margin: 0;
+
+  }
+  
+  /* Header styles (if you have them) */
+  header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: fixed; /* Makes navigation stay on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+nav {
+    display: flex;
+    align-items: right;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between; /* Ensures proper alignment */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+.logo span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Ensure all items are aligned properly */
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative; /* Needed for dropdown positioning */
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px 20px; /* Ensure equal padding for all items */
+    border: 2px solid black;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap; 
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: black;
+    color: white;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Rounded corners */
+    width: 190px; /* Ensure width fits */
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Style dropdown menu items */
+.dropdown-menu li {
+    list-style: none;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 50px; /* Ensures button-like shape */
+    margin: 5px;
+    transition: background 0.3s ease;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.dropdown-menu li a:hover {
+    background-color: black;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+  /* MAIN CONTENT WRAPPER */
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 40px; 
+    /* top padding ~100px if you have a fixed header */
+  }
+  
+  /* TOP SECTION */
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* ROW ONE: JOIN + 2 ellipses + 2 circles */
+  .row-one {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+  }
+  .join-text {
+    font-size: clamp(90px, 15vw, 100px);
+    font-weight: 900;
+    margin-right: 5vw; /* space between JOIN and shapes */
+    margin-left: 5vw;
+}
+  .shapes {
+    flex: 100; /* take up remaining space */
+    display: flex;
+    justify-content: flex-start; /* or space-between if you want them spread out more */
+    gap: 0vw; 
+  }
+  .ellipse {
+    width: 3em;
+    height: 6em;
+    border: 4px solid black;
+    border-radius: 50%;
+  }
+  .circle {
+    width: 6em;
+    height: 6em;
+    border: 4px solid black;
+    border-radius: 50%;
+  }
+  
+  /* ROW TWO: Gray text box on left, US on right */
+  .row-two {
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4rem;
+    
+    
+  }
+  .description-box {
+    width: 65%; /* left side */
+    background-color: #d3d3d3;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+  .us-text {
+    font-size: clamp(48px, 120vw, 100px);
+    font-weight: 900;
+    align-self: flex-end; 
+    margin-bottom: 10vw;
+    margin-bottom: 20vh;
+
+ 
+  }
+  
+  /* ROLES GRID */
+  .roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .role-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .role-card:hover {
+    transform: scale(1.03);
+
+  }
+  .role-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /* Footnote Container */
+.footnote {
+    display: flex;                
+    justify-content: space-between;
+    align-items: flex-start;      
+    gap: 20px;                    
+    margin: 40px auto;
+    max-width: 1200px;           
+    padding: 0 20px;            
+  }
+  
+  /* Left Side */
+  .footnote-left {
+    flex: 1;                 
+    font-family: 'Inter', sans-serif; 
+    font-size: 1rem;        
+    line-height: 1.5;
+
+  }
+  
+  /* Right Side */
+  .footnote-right {
+    flex: 1;                     
+    text-align: right;            
+    font-family: 'Pacifico', cursive; 
+    font-size: 1.7rem;
+    line-height: 1.5;
+    /* color: #000; */
+  }
+  /* Container for Text & Form */
+  .contact-section {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Spaces elements apart */
+    align-items: flex-start; /* Aligns items at the top */
+    max-width: 1000px;
+    width: 90%;
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+    flex: 1; /* Takes up left side */
+    text-align: left;
+    max-width: 40%;
+    font-size: 20px;
+}
+
+/* Contact Title */
+.contact-title {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Right Side: Contact Form */
+.contact-form-container {
+    flex: 1; /* Takes up right side */
+    max-width: 50%;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100px;
+    align-self: flex-end; /* Aligns button to the right */
+}
+/* Footer */
+footer {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    text-align: center; /* Centers the text */
+    padding: 20px 0; /* Adds spacing above and below */
+    font-size: 10px;
+    font-weight: bold;
+    width: 100%; /* Ensures it spans the entire width */
+    position: relative; /* Keeps it below other content */
+  }
+  
+  
