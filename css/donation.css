@@ -1,0 +1,260 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: white;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: right;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between; /* Ensures proper alignment */
+}
+
+/* Ensure the logo stays on the left */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Navigation List */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Ensure all items are aligned properly */
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative; /* Needed for dropdown positioning */
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px 20px; /* Ensure equal padding for all items */
+    border: 2px solid black;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap; 
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+nav ul li a.active {
+    background-color: black;
+    color: white;
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 190px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 5px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Form Container */
+.form-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto; /* Leaves space for fixed header */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left; /* Left-align the form text */
+  }
+  
+  /* Headings inside the form */
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .form-container h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  /* Steps */
+  .form-step {
+    display: none; /* Hide all steps by default */
+  }
+  .form-step.active {
+    display: block; /* Show only the active step */
+  }
+  
+  /* Labels and Inputs */
+  label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  /* Radio & Checkbox Groups */
+  .radio-group,
+  .checkbox-group {
+    margin-top: 10px;
+  }
+  
+  .radio-group label,
+  .checkbox-group label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: normal;
+  }
+  
+  /* For a new line after each radio/checkbox, use <br> or display: block in CSS */
+  .radio-group label + br,
+  .checkbox-group label + br {
+    margin-bottom: 10px; /* Optional spacing between lines */
+  }
+  
+  /* Navigation Buttons */
+  .form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-next {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-prev {
+    background-color: #ccc;
+    color: #000;
+  }
+  
+  .btn-submit {
+    background-color: #28a745;
+    color: #fff;
+    margin-left: auto;
+  }
+  
+  /* Blue link styling */
+  .blue-link {
+    color: #0000EE;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+  
