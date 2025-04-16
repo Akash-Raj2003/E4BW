@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E4BW | Editors For A Better World</title>
+    <link rel="stylesheet" href="css/donation.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Homepage/MAIN LOGO 1.png" alt="E4BW Logo">
+                <span>E4BW</span>
+            </div>
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li class="dropdown">
+                    <a href="#about">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="meet-the-team.html">Meet the Team</a></li> 
+                        <li><a href="join-us.html">Join the Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://payhip.com/editorsforabetterworld">Shop</a></li>
+                <li><a href="#donate" class="active">Donate</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="roles-available.html">roles</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+
+    <div class="form-container">
+        <form>
+        <h2>e4bw Product Donation Form</h2>
+    
+        <!-- Step 1: Basic Info -->
+        <div class="form-step active" id="step-1">
+          <p>
+            If you have any questions on donating, first look through the document below 
+            and if you’re still not sure, please contact us through our Instagram, Discord, or Email!
+          </p>
+          <p>
+            <a 
+              href="https://docs.google.com/document/d/1lu1vWp1zMI8IsATkTvWq2XJn_I-YEGrFiOo52zffxr4/edit?tab=t.0#heading=h.q3h7pww424pt" 
+              class="blue-link" 
+              target="_blank"
+            >
+              How to Donate your Resources
+            </a>
+          </p>
+    
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    
+          <label for="contactMethod">How else can we contact you? (examples below)</label>
+          <input type="text" id="contactMethod" name="contactMethod" placeholder="ex: your username on IG, Discord, etc." />
+    
+          <p>
+            <br>
+            If you would like to donate multiple things, you’ll have to submit the form multiple times! 
+            You can only choose one of the options for now, but if you’d like to donate something else as well, please submit the form again!
+          </p>
+          
+          <label>What are you donating? *</label>
+          <div class="radio-group">
+            <label><input type="radio" name="donationType" value="Project File" required /> project file (any program)</label>
+            <label><input type="radio" name="donationType" value="Preset Pack" /> preset pack (ex: shakes, transition packs)</label>
+            <label><input type="radio" name="donationType" value="Coloring Pack" /> coloring pack (ex: mbl, color corrections)</label><br>
+            <label><input type="radio" name="donationType" value="Coloring Pack" /> overlay pack</label><br>
+            <label><input type="radio" name="donationType" value="Other" /> Other</label>
+          </div>
+    
+          <!-- Navigation Buttons for Step 1 -->
+          <div class="form-navigation">
+            <button type="button" class="btn-next" id="nextBtn1">Next</button>
+          </div>
+        </div>
+    
+        <!-- STEP 2 (matches your screenshot layout) -->
+    <div class="form-step" id="step-2">
+        <h3>Other Products</h3>
+        <p>Reminder: A minimum of 5 presets, colorings, or overlays is required to donate as a pack.</p>
+  
+        <label>What program do you use?</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="programUsed" value="Alight Motion (xml link)">
+            Alight Motion (xml link)
+          </label><br>
+          <label>
+            <input type="radio" name="programUsed" value="After Effects">
+            Alight Motion (qr code)
+          </label><br>
+          <label>
+            <input type="radio" name="programUsed" value="Video Star">
+            After Effects
+          </label><br>
+          <label>
+            <input type="radio" name="programUsed" value="Sony Vegas Pro">
+            Video Star
+          </label><br>
+          <label>
+            <input type="radio" name="programUsed" value="Sony Vegas Pro">
+            Sony Vegas Pro
+          </label><br>
+          <label>
+            <input type="radio" name="programUsed" value="Sony Vegas Pro">
+            Other
+          </label><br>
+        </div>
+  
+        <label>Would you like to have your edit on TikTok and Instagram Reels for promotional purposes?</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="promotionalMention" value="Yes">
+            Yes
+          </label><br>
+          <label>
+            <input type="radio" name="promotionalMention" value="Yes">
+            No
+          </label><br>
+          <label>
+            <input type="radio" name="promotionalMention" value="No">
+            Other
+          </label>
+        </div>
+  
+        <label for="donationItem">What are you donating?</label>
+        <input 
+          type="text" 
+          id="donationItem" 
+          name="donationItem" 
+          placeholder="ex: overlays, transitions, etc." 
+        />
+  
+        <label for="productExplanation">Briefly explain your product.</label>
+        <textarea 
+          id="productExplanation" 
+          name="productExplanation" 
+          rows="3" 
+          placeholder="Any instructions or details about your product..."
+        ></textarea>
+  
+        <p>
+          Please read through the appropriate part of this 
+          <a href="#" class="blue-link">document</a> 
+          for instructions on how to donate. If anything is unclear, please message us on Instagram or Gmail.
+        </p>
+  
+        <label for="resourceLink">Please copy and paste the mega/icloud/google drive link to your resource!</label>
+        <input 
+          type="text" 
+          id="resourceLink" 
+          name="resourceLink" 
+          placeholder="URL to your resource" 
+        />
+  
+        <p>
+          Please let us know if you used a mega link! (Even if you chose “talk about link” just in case!)
+        </p>
+        <input 
+          type="text" 
+          id="donationItem" 
+          name="donationItem" 
+          placeholder="ex: overlays, transitions, etc." 
+        />
+  
+        <!-- Navigation Buttons for Step 2 -->
+        <div class="form-navigation">
+          <button type="button" class="btn-prev" id="prevBtn2">Back</button>
+          <!-- If this is your last step, change to type="submit" and rename to "Submit" -->
+          <button type="button" class="btn-next" id="nextBtn2">Next</button>
+        </div>
+      </div>
+    
+
+    <!-- STEP 3 (Donation Preview) -->
+    <div class="form-step" id="step-3">
+        <h3>Donation Preview</h3>
+        <ul>
+          <li>Each product includes a preview to demonstrate its features and functionality.</li>
+          <li>For project files, the preview may be the edit itself.</li>
+          <li>For transition or coloring packs, a video demonstration is recommended.</li>
+          <li>For overlay packs, please create a video showcasing the overlays.</li>
+        </ul>
+  
+        <label for="previewUpload">Add your donation preview here</label>
+        <input 
+          type="file" 
+          id="previewUpload" 
+          name="previewUpload" 
+          accept="video/*, image/*"
+        />
+  
+        <p>
+          We will upload your preview to our YouTube channel to ensure it is available on our Payhip. 
+          We can use your YouTube links from your personal channel, 
+          as we may consider uploading to our channel if yours is closed or deactivated.
+        </p>
+  
+        <label for="thumbnailUpload">Upload your thumbnail here</label>
+        <input 
+          type="file" 
+          id="thumbnailUpload" 
+          name="thumbnailUpload" 
+          accept="image/*"
+        />
+  
+        <p>
+          Provide a clear, high-quality cover image that effectively showcases your product's key features 
+          for use as the product thumbnail.
+        </p>
+  
+        <!-- Navigation Buttons for Step 3 -->
+        <div class="form-navigation">
+          <button type="button" class="btn-prev" id="prevBtn3">Back</button>
+          <!-- If this is your final step, change this to type="submit" or handle submission -->
+          <button type="button" class="btn-next" id="nextBtn3">Next</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- STEP 4 (Final Confirmation) -->
+    <div class="form-step" id="step-4">
+        <h3>And You’re Done!</h3>
+        <p>
+          I understand that I am giving e4bw the right to use my product for both marketing purposes 
+          and for future projects such as giveaways. *
+        </p>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="finalConsent" value="I Understand" required>
+            I understand
+          </label>
+        </div>
+
+        <label for="questions">Any questions?</label>
+        <textarea 
+          id="questions" 
+          name="questions" 
+          rows="3" 
+          placeholder=""
+        ></textarea>
+
+        <p>
+          We will contact you using the email provided in the beginning of the form.
+        </p>
+
+        <!-- Navigation Buttons for Step 4 (final) -->
+        <div class="form-navigation">
+          <button type="button" class="btn-prev" id="prevBtn4">Back</button>
+          <!-- Final form submission -->
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+
+
+  <!-- Example Footer -->
+  <footer>
+    <p>© 2024 Editors For A Better World. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/donation.js"></script>
+</body>
+</html>
