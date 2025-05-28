@@ -26,13 +26,12 @@ header {
 }
 
 nav {
-  display: flex;
-  align-items: right;
-  width: 100%;
-  max-width: 1200px;
-  justify-content: space-between;
+    display: flex;
+    align-items: right;
+    width: 100%;
+    max-width: 1300px;
+    justify-content: space-between; /* Ensures proper alignment */
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -147,7 +146,7 @@ nav ul li a.active {
   padding: 20px;
   color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-height: 500px; /* If you want a scrollable box */
+  max-height: 350px; /* If you want a scrollable box */
   overflow-y: auto;  /* scroll if content is long */
 }
 .left-box p {
@@ -263,18 +262,17 @@ nav ul li a.active {
 
   /* Spacing around the text */
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   margin: 35px 0;
 }
 
 /* The moving text inside the container */
 .banner-scroll-content {
-  position: absolute;
-  white-space: nowrap; /* So the text doesn’t break lines */
-  animation: bannerMarquee 8s linear infinite; 
-  /* 8s is how long it takes to go fully across;
-     adjust to make it faster/slower */
+  display: inline-block;
+  white-space: nowrap;
+  animation: bannerMarquee 9s linear infinite;
 }
+
 
 /* The actual text parts */
 .efabw-ef {
@@ -289,6 +287,14 @@ nav ul li a.active {
   font-size: 40px;
   color: white;
   background-color: #4CAF50; /* green color */
+  padding: 5px 10px;
+  border-radius: 20px; /* pill shape */
+}
+.efabw-fill {
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  background-color: white; /* green color */
   padding: 5px 10px;
   border-radius: 20px; /* pill shape */
 }
@@ -346,6 +352,7 @@ nav ul li a.active {
   height: auto;
   display: block;
   margin-bottom: 10px;
+  margin-bottom: 2em;
 }
 
 /* Hover Effect */
@@ -354,6 +361,14 @@ nav ul li a.active {
   opacity: 0.8;
 }
 /* Container for Text & Form */
+
+.contact-section {
+  margin-top: 2em;
+  background-color: #f5f5f5; /* Or #e0e0e0 for stronger contrast */
+  padding: 60px 40px;
+  width: 100%;
+}
+
 .contact-container {
   display: flex;
   justify-content: space-between; /* Spaces elements apart */
@@ -369,11 +384,12 @@ nav ul li a.active {
   text-align: left;
   max-width: 40%;
   font-size: 20px;
+  margin-top: 2em;
 }
 
 /* Contact Title */
 .contact-title {
-  background-color: black;
+  background-color: #20201e; /* softer black */
   color: white;
   display: inline-block;
   padding: 10px 20px;
@@ -392,6 +408,7 @@ nav ul li a.active {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-top: 2em;
 }
 
 .contact-form label {
@@ -419,10 +436,11 @@ nav ul li a.active {
 }
 /* Footer */
 footer {
+  margin-top: 0em;
   background-color: black; /* Black background */
   color: white; /* White text */
   text-align: center; /* Centers the text */
-  padding: 20px 0; /* Adds spacing above and below */
+  padding: 1px 0; /* Adds spacing above and below */
   font-size: 10px;
   font-weight: bold;
   width: 100%; /* Ensures it spans the entire width */

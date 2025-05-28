@@ -30,9 +30,9 @@ nav {
     display: flex;
     align-items: right;
     width: 100%;
-    max-width: 1200px;
     justify-content: space-between; /* Ensures proper alignment */
 }
+
 
 /* Ensure the logo stays on the left */
 .logo {

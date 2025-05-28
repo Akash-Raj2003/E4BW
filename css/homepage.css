@@ -15,31 +15,33 @@ html, body {
 body {
     position: relative;
     background-color: #fff;
-    padding-top: 60px; /* Adjust based on header height */
+
+    padding-top: 0px; /* Adjust based on header height */
 }
 
 
                       /* HEADER SECTION */
 header {
-    background-color: #fff;
-    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+    backdrop-filter: blur(0px); /* adds a frosted-glass blur */
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
-    position: fixed; /* Makes navigation stay on top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensures it stays above other elements */
+    z-index: 1000;
 }
+
 
                     /* NAVIGATION ICONS AT THE TOP OF THE PAGE */
 nav {
     display: flex;
     align-items: right;
     width: 100%;
-    max-width: 1200px;
     justify-content: space-between; /* Ensures proper alignment */
 }
 
@@ -62,12 +64,11 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    align-items: center; /* Ensure all items are aligned properly */
-    justify-content: space-between;
+    align-items: center;
     gap: 30px;
-    padding: 0;
-    margin: 0;
+    margin-left: auto; /* Pushes nav items to the right */
 }
+
 
 nav ul li {
     position: relative; /* Needed for dropdown positioning */
@@ -166,6 +167,14 @@ nav ul li a.active {
     bottom: 20px; /* Anchors the icons to the bottom instead of using 'top' */
 }
 
+/* Force TikTok logo to be smaller */
+.icon-tiktok {
+    width: 3.3vw !important;
+    max-width: 35px !important;
+    height: auto !important;
+}
+
+
 .social-icons img {
     width: 4vw; /* Responsive width */
     height: auto; /* Maintain aspect ratio */
@@ -240,51 +249,52 @@ nav ul li a.active {
 
                           /* STATISTICS SECTION */
 .stats-section {
-    background-color: #fff;
-    text-align: center;
-    padding: 30px 20px;
+  background-color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 2em;
 }
 
 .stats {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
 }
 
 .stat-box {
-    padding: 15px;
-    border: 2px solid black;
-    border-radius: 60px; /* Creates ellipse effect */
-    text-align: center;
-    transition: all 0.3s ease;
-    display: inline-block;
-    white-space: nowrap;
-    margin-top: 5vh; /* Moves it down */
-    margin-left: 0vw; /* Moves it right */
+  text-align: center;
 }
-.stat-box:hover {
-    background-color: grey;
-    color: white;
-    
-}
-
-.stat-box:hover * {
-    color: white; /* Ensures all text inside the stat-box turns white */
-}
-
-
 
 .stat-box h3 {
-    font-size: 64px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 48px;
+  font-weight: 1000;
+  color: black;
+  margin: 0;
 }
 
-.stat-box p {
-    font-size: 14px;
-    color: #555;
-    font-weight: bold;
+.stat-label {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  background-color: #e0e0e0; /* Light grey */
+  border: 2px solid black;   /* Black border */
+  border-radius: 999px;       /* Fully rounded ellipse */
+  text-transform: lowercase;
 }
+
+.stat-label:hover {
+  background-color: black;
+  color: #e0e0e0; /* Same light grey used earlier */
+  cursor: default; /* Optional: keeps the cursor as default (not a pointer) */
+}
+
+
+
+
 
                             /* PROJECT FILES SECTION */
 .project-files {
@@ -311,31 +321,54 @@ nav ul li a.active {
 }
 
 /* Marquee container (Only the text moves, not the lines) */
-.marquee {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: max-content;
-    animation: marquee 10s linear infinite;
-    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+.marquee-wrapper {
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+  background-color: #fff;
 }
 
-/* Style for the scrolling content */
-.marquee-content {
-    display: flex;
-    flex-direction: column; /* Stack the lines */
-    gap: 10px; /* Adjust spacing between lines */
-    align-items: center;
+.marquee-line {
+  position: absolute;
+  width: max-content; /* Or use 200% if you're repeating manually */
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1E3A8A;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-/* Animation for continuous right-to-left movement */
-@keyframes marquee {
-    from {
-        transform: translateX(100vw); /* Start fully off-screen */
-    }
-    to {
-        transform: translateX(-100%); /* Move fully past the left edge */
-    }
+
+/* Animation directions */
+.scroll-left {
+  top: 0;
+  animation: scroll-left 12s linear infinite;
+}
+
+.scroll-right {
+  bottom: 0;
+  animation: scroll-right 12s linear infinite;
+}
+
+/* Keyframes for opposing directions */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+
+/* Optional image inside line */
+.inline-icon {
+  height: 24px;
+  vertical-align: middle;
 }
 
 
@@ -502,6 +535,17 @@ nav ul li a.active {
     transform: rotate(180deg);
 }
 
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow down when dropdown is active */
+.dropdown-btn.active .arrow {
+  transform: rotate(90deg); /* ► becomes ▼ */
+}
+
+
 
 /* Back to Top Section */
 .back-to-top {
@@ -562,7 +606,7 @@ nav ul li a.active {
 
 /* Contact Title */
 .contact-title {
-    background-color: black;
+    background-color: #20201e; /* softer black */
     color: white;
     display: inline-block;
     padding: 10px 20px;
